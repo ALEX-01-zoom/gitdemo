@@ -35,3 +35,18 @@ class Reg (Frame):                                    #使用Frame方法（首�
         data3=self.ent3.get()
         data4=self.ent4.get() 
         #分别获得用户输入的数据
+        if len(data1)==0 or len(data2)==0 or len(data3)==0 or len(data4)==0:
+            self.lab5["text"] ='有项目未填写！'
+            self.lab5["bg"]='red'
+        #在有未输入的数据时，在预留文本框中显示“有项目未填写”，并将文本框背景改为红色
+        else:
+            print('新注册了一个用户：')
+            print('用户名是：',data1)
+            print('密码是：',data2)
+            print('电子邮件地址是：',data3)
+            print('手机号是：',data4)  
+            self.ent1.delete(0,len(data1))  
+            self.ent2.delete(0,len(data2))
+            self.ent3.delete(0,len(data3))
+            self.ent4.delete(0,len(data4)) 
+            #在数据完全时，清空文本框中数据，并按要求显示
