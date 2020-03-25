@@ -50,3 +50,8 @@ class Reg (Frame):                                    #使用Frame方法（首�
             self.ent3.delete(0,len(data3))
             self.ent4.delete(0,len(data4)) 
             #在数据完全时，清空文本框中数据，并按要求显示
+        
+top = Tk()                                             
+top.title("注册界面")                                    #将标题命名为“注册界面”
+app = Reg(top)                                         
+top.mainloop()                                         #运行程序
