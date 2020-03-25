@@ -13,3 +13,18 @@ class Reg (Frame):                                    #使用Frame方法（首�
         self.lab2 = Label(frame,text = "密码")  
         self.lab2.grid(row = 1,column = 0)  
         self.ent2 = Entry(frame,show = "*")          #使输入的密码显示为“*”
+        self.ent2.grid(row = 1,column = 1,sticky = W)
+        self.lab3 = Label(frame,text = "电子邮件")  
+        self.lab3.grid(row = 2,column = 0,sticky = W)  
+        self.ent3 = Entry(frame)  
+        self.ent3.grid(row = 2,column = 1,sticky = W)
+        self.lab4 = Label(frame,text = "手机号")  
+        self.lab4.grid(row = 3,column = 0,sticky = W)  
+        self.ent4 = Entry(frame)  
+        self.ent4.grid(row = 3,column = 1,sticky = W)  
+        self.lab5 = Label(frame,text = "",bg=top.cget('bg'))  
+        self.lab5.grid(row = 4,column = 1)            #特殊预留文本框，颜色预设为背景色
+        self.button = Button(frame,text = "提交",command = self.Submit)  
+        self.button.grid(row = 5,column = 1)          
+        #设置“提交”按钮键，点击时调用Submit函数
+#分别针对不同需要输入的数据类型建立标签以及文本框，并针对它们的几何位置进行合理的调整
