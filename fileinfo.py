@@ -55,3 +55,6 @@ top = Tk()
 top.title("注册界面")                                    #将标题命名为“注册界面”
 app = Reg(top)                                         
 top.mainloop()                                         #运行程序
+
+
+#验证协同开发
